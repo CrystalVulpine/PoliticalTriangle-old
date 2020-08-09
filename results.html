@@ -56,12 +56,15 @@
     		for (var i = 0; i < vars.length; i++) {
     			var thevar = vars[i].split('=');
     			if (thevar[0] === "left") {
+    				document.getElementById("left-score").innerHTML = parseFloat(thevar[1]);
     				left = parseFloat(thevar[1]) / 10;
     			}
     			if (thevar[0] === "right") {
+    				document.getElementById("right-score").innerHTML = parseFloat(thevar[1]);
     				right = parseFloat(thevar[1]) / 10;
     			}
     			if (thevar[0] === "lib") {
+    				document.getElementById("lib-score").innerHTML = parseFloat(thevar[1]);
     				lib = parseFloat(thevar[1]) / 10;
     			}
     		}
@@ -105,10 +108,6 @@
             canvas.fillStyle = 'red';
             canvas.fill();
             canvas.stroke();
-            
-            document.getElementById("left-score").innerHTML = left * 10;
-            document.getElementById("right-score").innerHTML = right * 10;
-            document.getElementById("lib-score").innerHTML = lib * 10;
     	</script>
     </body>
 </html>
