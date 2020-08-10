@@ -6,24 +6,12 @@
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
         <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
     </head>
-    <style>
-    	#score {
-    		border: 2px solid black;
-    	}
-    	#results {
-    		text-align: center;
-    		padding-bottom: 50px;
-    	}
-    	#reference2020 {
-    		text-align: center;	
-    	}
-    </style>
     <body>
-    	<div>
-    		<div id="results">
+    	<div style="text-align: center">
+    		<div class="results">
     	    <h1>Your results</h1>
-    	    <canvas id="canvas" height="720" width="750"></canvas>
-    		<div id="score"><h2>Your score is:</h2>
+    	    <canvas id="canvas" class="result-img" height="700" width="750"></canvas>
+    		<div class="score-box"><h2>Your score is:</h2>
     		<p><b><span id="left-score"></span> left</b></p>
     		<p><b><span id="right-score"></span> right</b></p>
     		<p><b><span id="lib-score"></span> libertarian</b></p>
@@ -32,7 +20,7 @@
     		
     		<hr>
     		
-    		<div id="reference2020">
+    		<div>
     		<p>For reference, below is a chart of the positions of major players in the 2020 US election, as well as a few well-known historical figures. Note that these are a rough estimate by the creator of the test and are not guaranteed to be correct.</p>
     		<img src="2020.png"></img>
     		</div>
