@@ -5,5 +5,5 @@ Take the test here: https://crystalvulpine.github.io/PoliticalTriangle/
 
 **Screenshots:**
 
-![](https://i.imgur.com/lhLIO7y.png)
-![](https://i.imgur.com/71ZExMh.png)
+![](https://i.imgur.com/IOa9OQD.png)
+![](https://i.imgur.com/DSe0quf.png)
