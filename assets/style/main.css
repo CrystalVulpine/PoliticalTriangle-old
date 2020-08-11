@@ -1,61 +1,61 @@
 body {
-	font-size: large;
-	font-family: arial;
+    font-size: large;
+    font-family: arial;
 }
 
 hr {
-	border-width: 2px;
+    border-width: 2px;
 }
 
 img, .result-img {
-	width: 75%;
-	max-width: max-content;
+    width: 75%;
+    max-width: max-content;
 }
 
 .question {
-	padding-bottom: 30px;
-	border: 1px solid black;
-	text-align: center;
-	background-color: beige;
-	border-radius: 10px;
-	margin-bottom: 10px;
+    padding-bottom: 30px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: beige;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .submit-button {
-	padding: 10px;
-	font-size: larger;
-	width: 50%;
-	margin-top: 20px;
+    padding: 10px;
+    font-size: larger;
+    width: 50%;
+    margin-top: 20px;
 }
 
 .results {
-	text-align: center;
-	display: inline-block;
-	border: 2px solid black;
-	padding-left: 20%;
-	padding-right: 20%;
-	background-color: #eee;
-	padding-bottom: 52em;
-	width: 40%;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid black;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #eee;
+    padding-bottom: 52em;
+    width: 40%;
 }
 
 .result-img {
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .score-box {
-	border: 1px solid black;
-	background-color: azure;
-	border-radius: 20px;
-	width: 60%;
-	display: inline-block;
-	position: absolute;
-	left: 20%;
-	right: 20%;
-	text-align: center;
-	top: 44em;
+    border: 1px solid black;
+    background-color: azure;
+    border-radius: 20px;
+    width: 60%;
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    top: 44em;
 }

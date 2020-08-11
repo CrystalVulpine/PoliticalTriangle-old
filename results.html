@@ -1,95 +1,95 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
         <meta charset="utf-8"/>
         <title>Test Results - The Political Triangle</title>
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
         <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
     </head>
     <body>
-    	<div style="text-align: center">
-    		<div class="results">
-    	    <h1>Your results</h1>
-    	    <canvas id="canvas" class="result-img" height="700" width="750"></canvas>
-    		<div class="score-box"><h2>Your score is:</h2>
-    		<p><b><span id="left-score"></span> left</b></p>
-    		<p><b><span id="right-score"></span> right</b></p>
-    		<p><b><span id="lib-score"></span> libertarian</b></p>
-    		</div>
-    		</div>
-    		
-    		<hr>
-    		
-    		<div>
-    		<p>For reference, below is a chart of the positions of major players in the 2020 US election, as well as a few well-known historical figures. Note that these are a rough estimate by the creator of the test and are not guaranteed to be correct.</p>
-    		<img src="assets/images/2020.png"></img>
-    		</div>
-    		
-    	</div>
-    	
-    	<script>
-    		var left = 0.0;
-    		var right = 0.0;
-    		var lib = 0.0;
-    	
-    		var parser = document.createElement('a');
-    		parser.href = window.location.href;
-    		var vars = parser.search.substring(1).split('&');
-    		for (var i = 0; i < vars.length; i++) {
-    			var thevar = vars[i].split('=');
-    			if (thevar[0] === "left") {
-    				document.getElementById("left-score").innerHTML = parseFloat(thevar[1]);
-    				left = parseFloat(thevar[1]) / 10;
-    			}
-    			if (thevar[0] === "right") {
-    				document.getElementById("right-score").innerHTML = parseFloat(thevar[1]);
-    				right = parseFloat(thevar[1]) / 10;
-    			}
-    			if (thevar[0] === "lib") {
-    				document.getElementById("lib-score").innerHTML = parseFloat(thevar[1]);
-    				lib = parseFloat(thevar[1]) / 10;
-    			}
-    		}
-    		
-    		var canvas = document.getElementById("canvas").getContext('2d');
-    		
-    		// stops the edge of the canvas from cutting off parts of the image
-    		var shift = 15;
-    		
-    		canvas.lineWidth = 2;
-    		canvas.beginPath();
-    		canvas.moveTo(180 + shift, 311.769 + shift);
-    		canvas.lineTo(360 + shift, 415.692 + shift);
-    		canvas.lineTo(540 + shift, 311.769 + shift);
-    		canvas.lineTo(360 + shift, 0 + shift);
-    		canvas.lineTo(180 + shift, 311.769 + shift);
-    		canvas.fillStyle = '#ffeeaa';
-    		canvas.fill();
-    		canvas.stroke();
-    		canvas.beginPath();
-    		canvas.moveTo(180 + shift, 311.769 + shift);
-    		canvas.lineTo(360 + shift, 415.692 + shift);
-    		canvas.lineTo(360 + shift, 623.538 + shift);
-    		canvas.lineTo(0 + shift, 623.538 + shift);
-    		canvas.lineTo(180 + shift, 311.769 + shift);
-    		canvas.fillStyle = '#ffaaaa';
-    		canvas.fill();
-    		canvas.stroke();
-    		canvas.beginPath();
-    		canvas.moveTo(360 + shift, 415.692 + shift);
-    		canvas.lineTo(540 + shift, 311.769 + shift);
-    		canvas.lineTo(720 + shift, 623.538 + shift);
-    		canvas.lineTo(360+ shift, 623.538 + shift);
-    		canvas.lineTo(360 + shift, 415.692 + shift);
-    		canvas.fillStyle = '#aaeeff';
-    		canvas.fill();
-    		canvas.stroke();
-    		
-    		canvas.beginPath();
-    		canvas.arc(360 - (left * 360) + (right * 360) + shift, 415.692 + (left * 207.846) + (right * 207.846) - (lib * 415.692) + shift, 12, 0, Math.PI * 2);
+        <div style="text-align: center">
+            <div class="results">
+            <h1>Your results</h1>
+            <canvas id="canvas" class="result-img" height="700" width="750"></canvas>
+            <div class="score-box"><h2>Your score is:</h2>
+            <p><b><span id="left-score"></span> left</b></p>
+            <p><b><span id="right-score"></span> right</b></p>
+            <p><b><span id="lib-score"></span> libertarian</b></p>
+            </div>
+            </div>
+            
+            <hr>
+            
+            <div>
+            <p>For reference, below is a chart of the positions of major players in the 2020 US election, as well as a few well-known historical figures. Note that these are a rough estimate by the creator of the test and are not guaranteed to be correct.</p>
+            <img src="assets/images/2020.png"></img>
+            </div>
+            
+        </div>
+        
+        <script>
+            var left = 0.0;
+            var right = 0.0;
+            var lib = 0.0;
+        
+            var parser = document.createElement('a');
+            parser.href = window.location.href;
+            var vars = parser.search.substring(1).split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var thevar = vars[i].split('=');
+                if (thevar[0] === "left") {
+                    document.getElementById("left-score").innerHTML = parseFloat(thevar[1]);
+                    left = parseFloat(thevar[1]) / 10;
+                }
+                if (thevar[0] === "right") {
+                    document.getElementById("right-score").innerHTML = parseFloat(thevar[1]);
+                    right = parseFloat(thevar[1]) / 10;
+                }
+                if (thevar[0] === "lib") {
+                    document.getElementById("lib-score").innerHTML = parseFloat(thevar[1]);
+                    lib = parseFloat(thevar[1]) / 10;
+                }
+            }
+            
+            var canvas = document.getElementById("canvas").getContext('2d');
+            
+            // stops the edge of the canvas from cutting off parts of the image
+            var shift = 15;
+            
+            canvas.lineWidth = 2;
+            canvas.beginPath();
+            canvas.moveTo(180 + shift, 311.769 + shift);
+            canvas.lineTo(360 + shift, 415.692 + shift);
+            canvas.lineTo(540 + shift, 311.769 + shift);
+            canvas.lineTo(360 + shift, 0 + shift);
+            canvas.lineTo(180 + shift, 311.769 + shift);
+            canvas.fillStyle = '#ffeeaa';
+            canvas.fill();
+            canvas.stroke();
+            canvas.beginPath();
+            canvas.moveTo(180 + shift, 311.769 + shift);
+            canvas.lineTo(360 + shift, 415.692 + shift);
+            canvas.lineTo(360 + shift, 623.538 + shift);
+            canvas.lineTo(0 + shift, 623.538 + shift);
+            canvas.lineTo(180 + shift, 311.769 + shift);
+            canvas.fillStyle = '#ffaaaa';
+            canvas.fill();
+            canvas.stroke();
+            canvas.beginPath();
+            canvas.moveTo(360 + shift, 415.692 + shift);
+            canvas.lineTo(540 + shift, 311.769 + shift);
+            canvas.lineTo(720 + shift, 623.538 + shift);
+            canvas.lineTo(360+ shift, 623.538 + shift);
+            canvas.lineTo(360 + shift, 415.692 + shift);
+            canvas.fillStyle = '#aaeeff';
+            canvas.fill();
+            canvas.stroke();
+            
+            canvas.beginPath();
+            canvas.arc(360 - (left * 360) + (right * 360) + shift, 415.692 + (left * 207.846) + (right * 207.846) - (lib * 415.692) + shift, 12, 0, Math.PI * 2);
             canvas.fillStyle = 'red';
             canvas.fill();
             canvas.stroke();
-    	</script>
+        </script>
     </body>
 </html>
