@@ -138,6 +138,15 @@
     				<option value="Right2">Those which are immoral or against the nation's values.</option>
     			</select>
     		</div>
+    		<div class="question" id="q13">
+    			<p>How should people be protected from themselves when making poor choices?</p>
+    			<select id="s13">
+    				<option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
+    			    <option value="Left2">Society probably knows better, and should stop people from making the wrong decisions.</option>
+    			    <option value="Right2">The leaders of the community know best, and should stop people from making the wrong decisions.</option>
+    			    <option value="Lib2">People should be encouraged to make better choices, but if they don't the consequences are their own fault. Others have no right to force them to stop.</option>
+    			</select>
+    		</div>
     		<div style="text-align: center"><button class="submit-button" id="submit">See results</button></div>
     	</div>
     	
@@ -149,40 +158,52 @@
     			var left = 0.0;
     			var lib = 0.0;
     			
-    			// make sure to change 12 to the number of questions
-    			for (var q = 1; q <= 12; q++) {
+    			// adds the submitted answers to the results URL, useful for feedback from test takers
+    			var answers = '';
+    			
+    			// make sure to change 13 to the number of questions
+    			for (var q = 1; q <= 13; q++) {
     				var s = document.getElementById("s" + q);
+    				if (s.options[s.selectedIndex].value === "Neutral") {
+    					answers += q + 'n-';
+    				}
     				if (s.options[s.selectedIndex].value === "Left1") {
     					left += 1.0;
+    					answers += q + 'l1-';
     				}
     				if (s.options[s.selectedIndex].value === "Left2") {
     					left += 5.0;
+    					answers += q + 'l2-';
     				}
     				if (s.options[s.selectedIndex].value === "Lib1") {
     					lib += 1.0;
+    					answers += q + 'i1-';
     				}
     				if (s.options[s.selectedIndex].value === "Lib2") {
     					lib += 5.0;
+    					answers += q + 'i2-';
     				}
     				if (s.options[s.selectedIndex].value === "Right1") {
     					right += 1.0;
+    					answers += q + 'r1-';
     				}
     				if (s.options[s.selectedIndex].value === "Right2") {
     					right += 5.0;
+    					answers += q + 'r2-';
     				}
     			}
     			
-    			// there are 48 points in total for each axis (sum of the max amount of points for each question)
-    			right /= 48.0;
-    			left /= 48.0;
-    			lib /= 48.0;
+    			// there are 53 points in total for each axis (sum of the max amount of points for each question)
+    			right /= 53.0;
+    			left /= 53.0;
+    			lib /= 53.0;
     			
     			// convert to a number between 0 and 10 rounded to the nearest hundredth
     			right = Math.round(right * 1000) / 100;
     			left = Math.round(left * 1000) / 100;
     			lib = Math.round(lib * 1000) / 100;
     			
-    			window.location.href = "results.html?left=" + left + "&right=" + right + "&lib=" + lib;
+    			window.location.href = "results.html?left=" + left + "&right=" + right + "&lib=" + lib + "&answers=" + answers;
     		}
     	</script>
     </body>
