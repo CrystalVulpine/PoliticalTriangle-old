@@ -2,14 +2,14 @@
 <html>
 	<head>
         <meta charset="utf-8"/>
-        <title>Political Triangle Test</title>
+        <title>The Political Triangle</title>
         <link rel='shortcut icon' type='image/x-icon' href='favicon.png'/>
-        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+        <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
     </head>
     <body>
     	<div>
     		<p>The political triangle is an improvement over the traditional political compass. While the original test attempted to harmonize the libertarian American right with the traditional hierarchical right by separating the economic and social axis, this still resulted in quite a few problems. For example, anti-statism and progressive statism were often conflated with each other as "libertarian". The right wing was described as laissez-faire free markets, but in practice was used to mean crony capitalism. This test, instead of trying to divide social vs economic beliefs, recognizes that there are three different main philosophies at the core of political systems: the (traditional) right favors hierarchy, the elite classes, and a well defined social structure; the libertarian side (the American right) esteems individual liberty as the top priority; and the left seeks equality, community, and collectivism.</p>
-    		<div style="text-align: center"><img src="diagram.png"></img></div>
+    		<div style="text-align: center"><img src="assets/images/diagram.png"></img></div>
     		<p>You may also notice that this test has only 12 questions. Another flaw of the original political compass test was that it asked mostly about specific issues, which caused skewed results and made many questions difficult to answer for those who did not have one of 2 given positions. Some controversies may also arise from separate disagreements which are mostly unrelated to a political viewpoint (such as whether life begins at birth or conception). This test resolves that by inquiring about your general attitudes towards politics instead.</p>
     		<p>The test will attempt to judge your standpoint between these vastly different belief systems. Answer each question as the society you would like to live in. Some answers are extreme, and some are moderate. If you don't agree with any of the given answers, either choose the one that is closest to your view, or don't answer it. Once you finish the test, it will plot your position on the triangle based on your answers, between left, right, and libertarian (the top section of the triangle).</p>
     		
@@ -149,7 +149,7 @@
     			var left = 0.0;
     			var lib = 0.0;
     			
-    			// make sure to change 11 to the number of questions
+    			// make sure to change 12 to the number of questions
     			for (var q = 1; q <= 12; q++) {
     				var s = document.getElementById("s" + q);
     				if (s.options[s.selectedIndex].value === "Left1") {
@@ -172,7 +172,7 @@
     				}
     			}
     			
-    			// there are 39 points in total for each axis (sum of the max amount of points for each question)
+    			// there are 48 points in total for each axis (sum of the max amount of points for each question)
     			right /= 48.0;
     			left /= 48.0;
     			lib /= 48.0;

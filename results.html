@@ -2,9 +2,9 @@
 <html>
 	<head>
         <meta charset="utf-8"/>
-        <title>Results - Political Triangle Test</title>
+        <title>Test Results - The Political Triangle</title>
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
-        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+        <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
     </head>
     <body>
     	<div style="text-align: center">
@@ -22,7 +22,7 @@
     		
     		<div>
     		<p>For reference, below is a chart of the positions of major players in the 2020 US election, as well as a few well-known historical figures. Note that these are a rough estimate by the creator of the test and are not guaranteed to be correct.</p>
-    		<img src="2020.png"></img>
+    		<img src="assets/images/2020.png"></img>
     		</div>
     		
     	</div>
@@ -86,7 +86,7 @@
     		canvas.stroke();
     		
     		canvas.beginPath();
-    		canvas.arc(360 - (left * 360) + (right * 360) + shift,415.692 + (left * 207.846) + (right * 207.846) - (lib * 415.692) + shift,12,0,2*Math.PI);
+    		canvas.arc(360 - (left * 360) + (right * 360) + shift, 415.692 + (left * 207.846) + (right * 207.846) - (lib * 415.692) + shift, 12, 0, Math.PI * 2);
             canvas.fillStyle = 'red';
             canvas.fill();
             canvas.stroke();
