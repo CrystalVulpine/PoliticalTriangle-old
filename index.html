@@ -21,7 +21,7 @@
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
                     <option value="Left1">The government should not provide <i>everything</i>, but should use it to help poverty and provide welfare to disadvantaged people, and fund public services.</option>
                     <option value="Left2">It should be used to provide everything for everyone, including health care, education, housing, food, work, etc.</option>
-                     <option value="Lib1">Taxes should be very limited and only provide basic necessities, such as police, courts, military, and emergency services.</option>
+                    <option value="Lib1">Taxes should be very limited and only provide basic necessities, such as police, courts, military, and emergency services.</option>
                     <option value="Lib2">Taxation is theft: the state should not be allowed to forcibly tax its citizens.</option>
                     <option value="Right1">It should be used for state organizations, and to help the nation and its people prosper and reward those who contribute to it.</option>
                     <option value="Right2">It should be used for state institutions, but also use it to maintain the social order, promote the nation's values, and fund wars if necessary.</option>
@@ -32,7 +32,7 @@
                 <select id="s2">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
                     <option value="Left1">The state should provide them with aid and benefits.</option>
-                       <option value="Left2">The state should provide them with reparations and special privileges in compensation.</option>
+                    <option value="Left2">The state should provide them with reparations and special privileges in compensation.</option>
                     <option value="Lib1">We should stop engaging in identity politics and distinguishing different groups.</option>
                     <option value="Lib2">We should stop engaging in identity politics and distinguishing different groups. Those currently struggling should be encouraged with ways to support themselves instead of being given handouts.</option>
                     <option value="Right1">They have all brought their problems upon themselves.</option>
@@ -44,7 +44,7 @@
                 <select id="s3">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
                     <option value="Left1">To prevent exploitive practices and mistreatment of workers.</option>
-                       <option value="Left2">Private business should be abolished: everything belongs to the people.</option>
+                    <option value="Left2">Private business should be abolished: everything belongs to the people.</option>
                     <option value="Lib1">Business should be minimally regulated, with only the most necessary regulations being implemented.</option>
                     <option value="Lib2">Businesses are the property of their owners: they can do as they please provided they don't infringe on others' rights.</option>
                     <option value="Right1">Good businesses which help the country prosper should be rewarded.</option>
@@ -172,7 +172,7 @@
                         answers += q + 'l1-';
                     }
                     if (s.options[s.selectedIndex].value === "Left2") {
-                        left += 5.0;
+                        left += 3.0;
                         answers += q + 'l2-';
                     }
                     if (s.options[s.selectedIndex].value === "Lib1") {
@@ -180,7 +180,7 @@
                         answers += q + 'i1-';
                     }
                     if (s.options[s.selectedIndex].value === "Lib2") {
-                        lib += 5.0;
+                        lib += 3.0;
                         answers += q + 'i2-';
                     }
                     if (s.options[s.selectedIndex].value === "Right1") {
@@ -188,15 +188,15 @@
                         answers += q + 'r1-';
                     }
                     if (s.options[s.selectedIndex].value === "Right2") {
-                        right += 5.0;
+                        right += 3.0;
                         answers += q + 'r2-';
                     }
                 }
                 
                 // there are 53 points in total for each axis (sum of the max amount of points for each question)
-                right /= 53.0;
-                left /= 53.0;
-                lib /= 53.0;
+                right /= (3.0 * 1.0) + (10.0 * 3.0);
+                left /= (3.0 * 1.0) + (10.0 * 3.0);
+                lib /= (3.0 * 1.0) + (10.0 * 3.0);
                 
                 // convert to a number between 0 and 10 rounded to the nearest hundredth
                 right = Math.round(right * 1000) / 100;
