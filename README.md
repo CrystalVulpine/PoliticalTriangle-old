@@ -3,7 +3,7 @@ The political triangle test is an improvement upon the political compass. Instea
 
 Take the test here: https://crystalvulpine.github.io/PoliticalTriangle/
 
-[![Website](https://img.shields.io/website/https/crystalvulpine.github.io/PoliticalTriangle?down_color=red&down_message=down&up_message=up)](https://crystalvulpine.github.io/PoliticalTriangle) ![GitHub language count](https://img.shields.io/github/languages/count/CrystalVulpine/PoliticalTriangle) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CrystalVulpine/PoliticalTriangle)
+[![Website](https://img.shields.io/website/https/crystalvulpine.github.io/PoliticalTriangle?down_color=red&down_message=down&up_message=up)](https://crystalvulpine.github.io/PoliticalTriangle)
 
 **Screenshots:**
 

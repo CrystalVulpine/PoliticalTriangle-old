@@ -5,59 +5,57 @@
         <title>The Political Triangle</title>
         <link rel='shortcut icon' type='image/x-icon' href='favicon.png'/>
         <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
+        <script src="assets/js/quiz.js"></script>
     </head>
     <body>
         <div>
             <p>The political triangle is an improvement over the traditional political compass. While the original test attempted to harmonize the libertarian American right with the traditional hierarchical right by separating the economic and social axis, this still resulted in quite a few problems. For example, anti-statism and progressive statism were often conflated with each other as "libertarian". The right wing was described as laissez-faire free markets, but in practice was used to mean crony capitalism. This test, instead of trying to divide social vs economic beliefs, recognizes that there are three different main philosophies at the core of political systems: the (traditional) right favors hierarchy, the elite classes, and a well defined social structure; the libertarian side (the American right) esteems individual liberty as the top priority; and the left seeks equality, community, and collectivism.</p>
             <div style="text-align: center"><img src="assets/images/diagram.png"></img></div>
-            <p>You may also notice that this test has only 13 questions. Another flaw of the original political compass test was that it asked mostly about specific issues, which caused skewed results and made many questions difficult to answer for those who did not have one of 2 given positions. Some controversies may also arise from separate disagreements which are mostly unrelated to a political viewpoint (such as whether life begins at birth or conception). This test resolves that by inquiring about your general attitudes towards politics instead.</p>
+            <p>You may also notice that this test has only 11 questions. Another flaw of the original political compass test was that it asked mostly about specific issues, which caused skewed results and made many questions difficult to answer for those who did not agree with either of 2 given "yes/no" positions. Some controversies may also arise from separate disagreements which are mostly unrelated to a political viewpoint (such as whether life begins at birth or conception). This test resolves that by inquiring about your general attitudes towards politics instead.</p>
             <p>The test will attempt to judge your standpoint between these vastly different belief systems. Answer each question as the society you would like to live in. Some answers are extreme, and some are moderate. If you don't agree with any of the given answers, either choose the one that is closest to your view (as it applies to government), or don't answer it. Once you finish the test, it will plot your position on the triangle based on your answers, between left, right, and libertarian (the top section of the triangle).</p>
             
             <hr>
             
             <div class="question" id="q1">
-                <p>What should be the priority when spending tax money?</p>
+                <p>How should public money be spent, and how much?</p>
                 <select id="s1">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">The government should not provide <i>everything</i>, but should use it to help poverty and provide welfare to disadvantaged people, and fund public services.</option>
-                    <option value="Left2">It should be used to provide everything for everyone, including health care, education, housing, food, work, etc.</option>
+                    <option value="Left1">The government should not provide everything, but a reasonable amount of taxing for public services and to help disadvantaged people is good.</option>
+                    <option value="Left2">It should be used to provide necessities for people, including health care, education, housing, food, work, etc.</option>
                     <option value="Lib1">Taxes should be very limited and only provide basic necessities, such as police, courts, military, and emergency services.</option>
                     <option value="Lib2">Taxation is theft: the state should not be allowed to forcibly tax its citizens.</option>
-                    <option value="Right1">It should be used for state organizations, and to help the nation and its people prosper and reward those who contribute to it.</option>
-                    <option value="Right2">It should be used for state institutions, but also use it to maintain the social order, promote the nation's values, and fund wars if necessary.</option>
+                    <option value="Right1">A moderate amount of funding for national interests and the wants of its people would be best.</option>
+                    <option value="Right2">It should be used to help the nation and its people flourish by acting in national interests and weeding out problems facing the country.</option>
                 </select>
             </div>
             <div class="question" id="q2">
-                <p>How should we deal with disadvantaged or minority groups?</p>
+                <p>People in certain minority groups face problems because:</p>
                 <select id="s2">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">The state should provide them with aid and benefits.</option>
-                    <option value="Left2">The state should provide them with reparations and special privileges in compensation.</option>
-                    <option value="Lib1">We should stop engaging in identity politics and distinguishing different groups.</option>
-                    <option value="Lib2">We should stop engaging in identity politics and distinguishing different groups. Those currently struggling should be encouraged with ways to support themselves instead of being given handouts.</option>
-                    <option value="Right1">They have all brought their problems upon themselves.</option>
-                    <option value="Right2">They are a problem in society which needs to be solved or possibly even purged.</option>
+                    <option value="Left1">They are at a disadvantage and should be given protections to prevent this.</option>
+                    <option value="Lib1">Groupings shouldn't matter, and there can be good and bad people in all of them. Everyone should be subject to the same rules.</option>
+                    <option value="Right1">They refuse to comply with the standards of society and have brought it upon themselves.</option>
                 </select>
             </div>
             <div class="question" id="q3">
                 <p>How should business and corporations be regulated?</p>
                 <select id="s3">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">To prevent exploitive practices and mistreatment of workers.</option>
-                    <option value="Left2">Private business should be abolished: everything belongs to the people.</option>
-                    <option value="Lib1">Business should be minimally regulated, with only the most necessary regulations being implemented.</option>
-                    <option value="Lib2">Businesses are the property of their owners: they can do as they please provided they don't infringe on others' rights.</option>
-                    <option value="Right1">Good businesses which help the country prosper should be rewarded.</option>
-                    <option value="Right2">In the interests of the nation: businesses which help the state should be well rewarded and promoted, and those which hurt it should be shut down.</option>
+                    <option value="Left1">Enough to prevent exploitive corporate practices and mistreatment of workers.</option>
+                    <option value="Left2">Tightly to make sure they serve the greater good and not only themselves.</option>
+                    <option value="Lib1">Minimally, with only the most necessary regulations being implemented.</option>
+                    <option value="Lib2">Businesses are the property of their owners: they should be allowed to do as they please provided they don't infringe on others' rights.</option>
+                    <option value="Right1">To encourage them to benefit the country.</option>
+                    <option value="Right2">They should be under tight control to ensure they are serving the nation's interests.</option>
                 </select>
             </div>
             <div class="question" id="q4">
-                <p>Should different groups of people be segregated?</p>
+                <p>What should the government do about segregating or integrating different groups?</p>
                 <select id="s4">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">No, segregation must be stopped and is not permissible.</option>
-                    <option value="Lib2">Different people and businesses should be allowed to decide for themselves.</option>
-                    <option value="Right2">Yes, certain people are greater than others and should be separated as not to interfere with each other.</option>
+                    <option value="Left1">Segregation must be stopped and integration by law should be in effect.</option>
+                    <option value="Lib1">Different people and businesses should be allowed to decide for themselves, it's their choice whether to interact or not.</option>
+                    <option value="Right1">Different groups should be separated as not to interfere with each other and preserve their culture.</option>
                 </select>
             </div>
             <div class="question" id="q5">
@@ -66,145 +64,67 @@
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
                     <option value="Left2">Hate speech or speech which is offensive towards a person or a group of people.</option>
                     <option value="Lib2">None, all censorship is bad.</option>
-                    <option value="Right2">Obscenity and/or rebellion against the nation and its values.</option>
+                    <option value="Right2">Obscenity and/or severe opposition to the nation and its core values.</option>
                 </select>
             </div>
             <div class="question" id="q6">
-                <p>How should the cost of services such as college and health care be dealt with?</p>
+                <p>When someone is caught engaging in criminal activity, what it the best way to handle the situation?</p>
                 <select id="s6">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">The government should use public money to help cover the cost, or perhaps make them free.</option>
-                    <option value="Lib1">People should explore and create better options in the market that are affordable.</option>
-                    <option value="Right1">The state should ensure that deserving citizens have access to these services.</option>
+                    <option value="Left2">They should be given reeducation so they can be rehabilitated and re-integrated into society.</option>
+                    <option value="Lib2">Only do what is necessary to prevent them from committing more crimes.</option>
+                    <option value="Right2">They should receive retribution for their wrongdoings.</option>
                 </select>
             </div>
             <div class="question" id="q7">
-                <p>How should criminals be dealt with?</p>
+                <p>What is your stance on immigration and border policy?</p>
                 <select id="s7">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">They should be provided with reeducation so they can become functioning members of society.</option>
-                    <option value="Lib1">Only do what is necessary to prevent them from committing more crimes.</option>
-                    <option value="Right1">They should receive retribution for their deeds.</option>
+                    <option value="Left1">Immigrants should be welcomed and provided with benefits in compensation for being at a disadvantage.</option>
+                    <option value="Lib1">Immigrants should be allowed to enter, and subject to the same rules as everyone else.</option>
+                    <option value="Right1">Foreign groups overrunning the country and taking over it and its culture is a serious threat.</option>
                 </select>
             </div>
             <div class="question" id="q8">
-                <p>What is your stance on immigration?</p>
+                <p>What best describes your ideal form of government?</p>
                 <select id="s8">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">Immigrants should be welcomed and provided with benefits in compensation for being disadvantaged.</option>
-                    <option value="Lib1">Immigrants should be allowed to enter, and subject to the same rules as everyone else.</option>
-                    <option value="Right1">Foreigners should be mostly kept out to prevent them from overrunning the country.</option>
+                    <option value="Left1">It should play an active role in improving the lives of its citizens and leveling the playing field.</option>
+                    <option value="Left2">It should try to ensure equality and a good life for every good person.</option>
+                    <option value="Lib1">It needs to be limited and only provide protection for people's rights.</option>
+                    <option value="Lib2">It shouldn't exist, people should not be forcibly subjected to anything.</option>
+                    <option value="Right1">It should serve as the benefactor of the nation and its good citizens.</option>
+                    <option value="Right2">It should actively work to make its country prosperous, and enforce its central values, morals, and ideas.</option>
                 </select>
             </div>
             <div class="question" id="q9">
-                <p>How should property be handled?</p>
+                <p>What is the most important thing which must be protected?</p>
                 <select id="s9">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">Private business and wealth should be regulated; personal belongings are mostly okay.</option>
-                    <option value="Left2">Property is theft: all personal and private property ownership should be abolished, everything belongs to the people.</option>
-                    <option value="Lib1">For the most part, people should control their own property, unless it breaks the law.</option>
-                    <option value="Lib2">People should be allowed to do whatever they want with their property as long as it doesn't affect others; it belongs to them.</option>
-                    <option value="Right1">For the most part it belongs to its owner, but state interests should be able to override it.</option>
-                    <option value="Right2">It all belongs to the good citizens of the state who will help the nation.</option>
+                    <option value="Left2">Equality and ensuring that everyone can have a good life.</option>
+                    <option value="Lib2">The individual people and their rights.</option>
+                    <option value="Right2">The nation, its values, and its prosperity.</option>
                 </select>
             </div>
             <div class="question" id="q10">
-                <p>What best describes your ideal form of government?</p>
+                <p>What sorts of non-violent actions, if any, should be criminalized?</p>
                 <select id="s10">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">It should play an active role in improving the lives of its citizens and leveling the playing field.</option>
-                    <option value="Left2">It should provide everything for its citizens, and ensure that everyone is equal.</option>
-                    <option value="Lib1">It needs to be small and play a limited role in people's lives.</option>
-                    <option value="Lib2">It shouldn't exist, people should not be forcibly subjected to one organization. People belong to themselves.</option>
-                    <option value="Right1">It should actively work to make its country prosperous, and promote its central values, morals, and ideas.</option>
-                    <option value="Right2">It should work to remove any undesirable aspects of its country, and make itself strong so it can lead the nation and their people to greatness.</option>
+                    <option value="Left2">Those which cause inequality or are offensive.</option>
+                    <option value="Lib2">None, only actions which infringe upon the liberty of others should be illegal.</option>
+                    <option value="Right2">Those which are immoral or socially unacceptable.</option>
                 </select>
             </div>
             <div class="question" id="q11">
-                <p>What is the most important thing which must be protected?</p>
+                <p>How should people be protected from themselves when making poor choices?</p>
                 <select id="s11">
                     <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">Equality, community, sharing, and the collective society.</option>
-                    <option value="Lib2">The individual people and their rights.</option>
-                    <option value="Right2">The nation and its values.</option>
+                    <option value="Left1">Society probably knows better, and should stop people from making the wrong decisions.</option>
+                    <option value="Lib1">People should be encouraged to make better choices, but if they don't the consequences are their own fault. Others have no right to force them to stop.</option>
+                    <option value="Right1">The leaders and authority figures know best, and should stop people from making the wrong decisions.</option>
                 </select>
             </div>
-            <div class="question" id="q12">
-                <p>What sorts of non-violent actions, if any, should be criminalized?</p>
-                <select id="s12">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">Those which cause inequality or are socially unacceptable.</option>
-                    <option value="Lib2">None, only actions which infringe upon the liberty of others should be illegal.</option>
-                    <option value="Right2">Those which are immoral or against the nation's values.</option>
-                </select>
-            </div>
-            <div class="question" id="q13">
-                <p>How should people be protected from themselves when making poor choices?</p>
-                <select id="s13">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">Society probably knows better, and should stop people from making the wrong decisions.</option>
-                    <option value="Right2">The leaders of the community know best, and should stop people from making the wrong decisions.</option>
-                    <option value="Lib2">People should be encouraged to make better choices, but if they don't the consequences are their own fault. Others have no right to force them to stop.</option>
-                </select>
-            </div>
-            <div style="text-align: center"><button class="submit-button" id="submit">See results</button></div>
+            <div style="text-align: center"><button class="submit-button" id="submit" onclick="calculateScore();">See results</button></div>
         </div>
-        
-        <script>
-            document.getElementById("submit").onclick = calculateScore;
-        
-            function calculateScore() {
-                var right = 0.0;
-                var left = 0.0;
-                var lib = 0.0;
-                
-                // adds the submitted answers to the results URL, useful for feedback from test takers
-                var answers = '';
-                
-                // make sure to change 13 to the number of questions
-                for (var q = 1; q <= 13; q++) {
-                    var s = document.getElementById("s" + q);
-                    if (s.options[s.selectedIndex].value === "Neutral") {
-                        answers += q + 'n-';
-                    }
-                    if (s.options[s.selectedIndex].value === "Left1") {
-                        left += 1.0;
-                        answers += q + 'l1-';
-                    }
-                    if (s.options[s.selectedIndex].value === "Left2") {
-                        left += 3.0;
-                        answers += q + 'l2-';
-                    }
-                    if (s.options[s.selectedIndex].value === "Lib1") {
-                        lib += 1.0;
-                        answers += q + 'i1-';
-                    }
-                    if (s.options[s.selectedIndex].value === "Lib2") {
-                        lib += 3.0;
-                        answers += q + 'i2-';
-                    }
-                    if (s.options[s.selectedIndex].value === "Right1") {
-                        right += 1.0;
-                        answers += q + 'r1-';
-                    }
-                    if (s.options[s.selectedIndex].value === "Right2") {
-                        right += 3.0;
-                        answers += q + 'r2-';
-                    }
-                }
-                
-                // divide by the points in total for each axis (sum of the max amount of points for each question)
-                right /= (3.0 * 1.0) + (10.0 * 3.0);
-                left /= (3.0 * 1.0) + (10.0 * 3.0);
-                lib /= (3.0 * 1.0) + (10.0 * 3.0);
-                
-                // convert to a number between 0 and 10 rounded to the nearest hundredth
-                right = Math.round(right * 1000) / 100;
-                left = Math.round(left * 1000) / 100;
-                lib = Math.round(lib * 1000) / 100;
-                
-                window.location.href = "results.html?left=" + left + "&right=" + right + "&lib=" + lib + "&answers=" + answers;
-            }
-        </script>
     </body>
 </html>
