@@ -3,49 +3,11 @@ body {
     font-size: large;
     font-family: verdana, arial, sans-serif;
 
+    /**/
     margin: 1vh 0 1vh 0;
 
     background: lightgreen;
     color: purple;
-}
-
-/*Set another font for titles*/
-h1, h2, h3, header a {
-    font-family: "Times New Roman", serif;
-}
-
-/*Selection*/
-::-moz-selection {
-    background: green;
-    color: pink;
-}
-
-::selection {
-    background: green;
-    color: pink;
-}
-
-/*Scrollbar*/
-::-webkit-scrollbar {
-    width: 1vw;
-}
-
-::-webkit-scrollbar-track {
-    background: green;
-}
-
-::-webkit-scrollbar-thumb {
-    background: purple;
-    border: 0.5vmin solid #00000050;
-    border-radius: 1vw;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #4C004C; /*dark purple*/
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: #330033; /*darker purple*/
 }
 
 /*Add a horizontal margin around the content*/
@@ -66,18 +28,7 @@ header, footer {
 
 /*Set the header's font-size*/
 header {
-    font-size: 40px;
-}
-
-/*Make an element centered*/
-.centered {
-    text-align: center;
-    align-items: center;
-}
-
-/*Make an element invisible*/
-.invis {
-    display: none;
+    font-size: 30px;
 }
 
 /*Make links purple*/
@@ -167,6 +118,11 @@ img, .result-img {
     background: linear-gradient(to bottom right, #00000010, #00000080);
 }
 
+/*make the canvas*/
+#canvas {
+    background-image: url("assets/images/diagram.svg");
+}
+
 /*Style the score box*/
 .score-box {
     display: inline-block;
@@ -180,6 +136,12 @@ img, .result-img {
     padding: 10px 0 20px 0;
 }
 
+/*Make an element centered*/
+.centered {
+    text-align: center;
+    align-items: center;
+}
+
 /*Mobile*/
 @media only screen and (max-width: 1200px) {
     /*Give the body more horizontal margin*/
@@ -190,22 +152,6 @@ img, .result-img {
 
     /*Make the header font size larger*/
     header {
-        font-size: 60px;
-    }
-
-    /*Add a horizontal margin around the content*/
-    #content {
-        margin: 0 5vw 0 5vw;
-    }
-
-    /*Make the question text bigger*/
-    .question, #submit {
         font-size: 50px;
-    }
-
-    /*Make the radio buttons bigger and add a margin*/
-    input[type='radio'] { 
-        transform: scale(3);
-        margin-top: 100px;
     }
 }

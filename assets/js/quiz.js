@@ -1,59 +1,82 @@
-function calculateScore() {
-	
-	var questionCount = 11;
-	
-	// questions with only moderate answers
-	var moderateAnswers = 4;
-	
-	// questions with strong answers
-	var strongAnswers = 7;
-	
-	var moderateWeight = 1.0;
-	var strongWeight = 2.0;
-	
-	// adds the submitted answers to the results URL, useful for feedback from test takers
-	var answers = '';
-	var right = 0.0;
-	var left = 0.0;
-	var lib = 0.0;
+// questions with only moderate answers
+const moderateAnswers = 4;
 
-	for (let q = 1; q <= questionCount; q++) {
-		
-	    let s = document.getElementById("s" + q);
-	    
-	    if (s.options[s.selectedIndex].value === "Neutral") {
-	    	answers += 'n';
-	    } else if (s.options[s.selectedIndex].value === "Left1") {
-			left += moderateWeight;
-			answers += 'l1';
-	    } else if (s.options[s.selectedIndex].value === "Left2") {
-	    	left += strongWeight;
-	    	answers += 'l2';
-	    } else if (s.options[s.selectedIndex].value === "Lib1") {
-	    	lib += moderateWeight;
-	    	answers += 'i1';
-	    } else if (s.options[s.selectedIndex].value === "Lib2") {
-	    	lib += strongWeight;
-	    	answers += 'i2';
-	    } else if (s.options[s.selectedIndex].value === "Right1") {
-	    	right += moderateWeight;
-	    	answers += 'r1';
-	    } else if (s.options[s.selectedIndex].value === "Right2") {
-	    	right += strongWeight;
-	    	answers += 'r2';
-	    }
-	}
+// questions with strong answers
+const strongAnswers = 7;
 
-	// divide by the points in total for each axis (sum of the max amount of points for each question)
-	right /= (moderateAnswers * moderateWeight) + (strongAnswers * strongWeight);
-	left /= (moderateAnswers * moderateWeight) + (strongAnswers * strongWeight);
-	lib /= (moderateAnswers * moderateWeight) + (strongAnswers * strongWeight);
+// Moderate answers give you one point
+const moderateWeight = 1.0;
 
-	// convert to a number between 0 and 10 rounded to the nearest hundredth
-	right = Math.round(right * 1000) / 100;
-	left = Math.round(left * 1000) / 100;
-	lib = Math.round(lib * 1000) / 100;
+// Strogn answers give you two points
+const strongWeight = 2.0;
 
-	window.location.href = "results.html?left=" + left + "&right=" + right + "&lib=" + lib + "&answers=" + answers;
+// Get the maximum number of points possible
+const maxPoints = moderateAnswers * moderateWeight + strongAnswers * strongWeight;
 
+// adds the submitted answers to the results URL, useful for feedback from test takers
+var right = 0.0;
+var left = 0.0;
+var lib = 0.0;
+
+function calculateScore() {    
+    // Get an HTML collection of every question
+    const questions = document.getElementsByClassName('question');
+
+    // Get an HTML collection of each possible answer
+    const answers = document.getElementsByTagName('input');
+
+    // Make sure every question has an answer before doing anything
+
+    // Loop through each question
+    for (let q = 0; q < questions.length; q++) {
+        // Get every possible answer for the question
+        const qAnswers = questions[q].getElementsByTagName('input');
+
+        // Make sure at least one answer is selected
+        var answered = false;
+        for (let a = 0; a < qAnswers.length; a++) {
+            if (qAnswers[a].checked) {
+                answered = true;
+                break;
+            }
+        }
+
+        // The question is blank
+        if (!answered) {
+            // Tell the user
+            alert(`Question #${q + 1} has not been answered!`);
+
+            // Scroll to the question for them
+            window.location.href = `#q${q + 1}`;
+
+            // Refuse to calculate the results
+            return;
+        }
+    }
+
+    // Loop through each answer
+    for (let a = 0; a < answers.length; a++) {
+        // Apply the answer, if it's selected
+        if (answers[a].checked) {
+            // Get the answer's value
+            let val = answers[a].value;
+
+            // Get the correct weight, and add it to the correct axis
+            left += moderateWeight * (val == 'Left1') + strongWeight * (val == 'Left2');
+            lib += moderateWeight * (val == 'Lib1') + strongWeight * (val == 'Lib2');
+            right += moderateWeight * (val == 'Right1') + strongWeight * (val == 'Right2');
+        }
+    }
+
+    // divide by the points in total for each axis
+    right /= maxPoints;
+    left /= maxPoints;
+    lib /= maxPoints;
+
+    // convert to a number between 0 and 10 rounded to the nearest hundredth
+    right = Math.round(right * 1000) / 100;
+    left = Math.round(left * 1000) / 100;
+    lib = Math.round(lib * 1000) / 100;
+
+    window.location.href = "results.html?left=" + left + "&right=" + right + "&lib=" + lib;
 }
