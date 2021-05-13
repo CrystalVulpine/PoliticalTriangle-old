@@ -2,127 +2,288 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Test - The Political Triangle</title>
-        <link rel='shortcut icon' type='image/x-icon' href='favicon.png'/>
+        <title>Take the Political Triangle Test!</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
         <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
         <script src="assets/js/quiz.js"></script>
     </head>
     <body>
-    	<div>
-    		<p>You may notice that this test has only 11 questions. Another flaw of the original political compass test was that it asked mostly about specific issues, which caused skewed results and made many questions difficult to answer for those who did not agree with either of 2 given "yes/no" positions. Some controversies may also arise from separate disagreements which are mostly unrelated to a political viewpoint (such as whether life begins at birth or conception). This test resolves that by inquiring about your general attitudes towards politics instead.</p>
-    		<p>The test will attempt to judge your standpoint between these vastly different belief systems. Answer each question as the society you would like to live in. Some answers are extreme, and some are moderate. If you don't agree with any of the given answers, either choose the one that is closest to your view (as it applies to government), or don't answer it. Once you finish the test, it will plot your position on the triangle based on your answers, between left, right, and libertarian (the top section of the triangle).</p>
+        <script src="assets/js/header.js"></script>
+    	<div id="content">
+            <h1>Take the Political Triangle Test!</h1>
+
+            <p>For each question, select the option you agree with the most. Once you finish the test, it will plot your position on the triangle based on your answers, between Libertarian, Left, and Right.</p><br>
 
             <div class="question" id="q1">
-                <p>How should public money be spent, and how much?</p>
-                <select id="s1">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">People should be expected to work for their living, but a reasonable amount of taxing for public services and helping disadvantaged people is good.</option>
-                    <option value="Left2">It should provide basic necessities for people, including health care, education, housing, food, work, etc.</option>
-                    <option value="Lib1">Taxes should be very limited and only provide basic necessities, such as police, courts, military, and emergency services.</option>
-                    <option value="Lib2">Taxation is theft: the state should not be allowed to forcibly tax its citizens.</option>
-                    <option value="Right1">A moderate amount of funding for national interests and the wants of its people would be best.</option>
-                    <option value="Right2">It should be used to help the nation and its people flourish by acting in national interests and weeding out problems facing the country.</option>
-                </select>
+                <h2>1. What should be the government's first priority when spending tax dollars?</h2>
+
+                <input type="radio" name="s1" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s1" value="Left1">
+                To provide social services to the poor.
+                <br>
+
+                <input type="radio" name="s1" value="Left2">
+                To provide everything people need.
+                <br>
+
+                <input type="radio" name="s1" value="Lib1">
+                Basic necessities, such as police, courts, and emergency services.
+                <br>
+
+                <input type="radio" name="s1" value="Lib2">
+                Taxation is theft; the state should not be allowed to forcibly tax its citizens.
+                <br>
+
+                <input type="radio" name="s1" value="Right1">
+                To fund a strong military and police force.
+                <br>
+
+                <input type="radio" name="s1" value="Right2">
+                The needs and wants of the monarch or dictator
+                <br>
             </div>
+
             <div class="question" id="q2">
-                <p>People in certain minority groups face problems because:</p>
-                <select id="s2">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">They are at a disadvantage and should be given legal protections to compensate for this.</option>
-                    <option value="Lib1">Groupings shouldn't matter, and there can be good and bad people in all of them. Everyone should be subject to the same rules.</option>
-                    <option value="Right1">They refuse to comply with the standards of society and have brought it upon themselves.</option>
-                </select>
+                <h2>2. How should minorities be treated?</h2>
+
+                <input type="radio" name="s2" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s2" value="Left1">
+                The state should utilize affirmative action.
+                <br>
+
+                <input type="radio" name="s2" value="Lib1">
+                Minorities should have the same rights as everyone else.
+                <br>
+
+                <input type="radio" name="s2" value="Right1">
+                They should be actively oppressed by the state.
+                <br>
             </div>
+
             <div class="question" id="q3">
-                <p>How should business and corporations be regulated?</p>
-                <select id="s3">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">Enough to prevent exploitive corporate practices and mistreatment of workers and unions.</option>
-                    <option value="Left2">Tightly to make sure they serve the greater good and not only themselves.</option>
-                    <option value="Lib1">Minimally, with only the most necessary regulations being implemented.</option>
-                    <option value="Lib2">Businesses are the property of their owners: they should be allowed to do as they please provided they don't infringe on others' rights.</option>
-                    <option value="Right1">To encourage them to benefit the country.</option>
-                    <option value="Right2">They should be under tight government control to ensure they are serving the nation's interests.</option>
-                </select>
+                <h2>3. How should businesses be regulated?</h2>
+
+                <input type="radio" name="s3" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s3" value="Left1">
+                The government should make sure workers are treated well, sufficiently paid, and can unionize.
+                <br>
+
+                <input type="radio" name="s3" value="Left2">
+                The government should directly own and control the means of production.
+                <br>
+
+                <input type="radio" name="s3" value="Lib1">
+                Minimally, with only the most necessary regulations being implemented.
+                <br>
+
+                <input type="radio" name="s3" value="Lib2">
+                Businesses should not be regulated, except to protect property rights.
+                <br>
+
+                <input type="radio" name="s3" value="Right1">
+                We need strong tariffs to protect domestic industry.
+                <br>
+
+                <input type="radio" name="s3" value="Right2">
+                The government should not protect the weak at the expense of the strong.
+                <br>
             </div>
+
             <div class="question" id="q4">
-                <p>What should the government do about segregating or integrating different groups?</p>
-                <select id="s4">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">Segregation must be stopped and legal action is needed to stop racism and bigotry.</option>
-                    <option value="Lib1">Different people and businesses should be allowed to decide for themselves, it's their choice whether to interact or not.</option>
-                    <option value="Right1">Different groups should be separated as to not interfere with each other, and preserve their culture.</option>
-                </select>
+                <h2>4. How should we deal with discrimination?</h2>
+
+                <input type="radio" name="s4" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s4" value="Left1">
+                Discrimination should be illegal.
+                <br>
+
+                <input type="radio" name="s4" value="Lib1">
+                Individuals and businesses should be allowed to freely associate as they please.
+                <br>
+
+                <input type="radio" name="s4" value="Right1">
+                Minorities should be segregated by law.
+                <br>
             </div>
+
             <div class="question" id="q5">
-                <p>What kind of speech, if any, should be regulated?</p>
-                <select id="s5">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">Extremely hateful speech or speech which is very offensive towards a person or a group of people.</option>
-                    <option value="Lib2">None, all censorship is bad.</option>
-                    <option value="Right2">Obscenity and/or extreme propaganda against the nation and its core values.</option>
-                </select>
+                <h2>5. What kind of speech, if any, should be regulated?</h2>
+
+                <input type="radio" name="s5" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s5" value="Left2">
+                Hateful or politically incorrect speech should be banned.
+                <br>
+
+                <input type="radio" name="s5" value="Lib2">
+                None, all censorship is bad.
+                <br>
+
+                <input type="radio" name="s5" value="Right2">
+                Pornography and other obscene material should be banned.
+                <br>
             </div>
+
             <div class="question" id="q6">
-                <p>When someone is caught engaging in criminal activity, what it the best way to handle the situation?</p>
-                <select id="s6">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">They should be given re-education so they can be rehabilitated and re-integrated into society.</option>
-                    <option value="Lib2">Only do what is necessary to prevent them from committing more crimes.</option>
-                    <option value="Right2">They should receive retribution for their evil deeds.</option>
-                </select>
+                <h2>6. How should the government deal with crime (in most cases)?</h2>
+
+                <input type="radio" name="s6" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s6" value="Left1">
+                Rehabilitation should be prioritized over punishment.
+                <br>
+
+                <input type="radio" name="s6" value="Left2">
+                Criminals should be forced to work in government-owned labor-camps.
+                <br>
+
+                <input type="radio" name="s6" value="Lib1">
+                Criminals should just be fined and let go.
+                <br>
+
+                <input type="radio" name="s6" value="Lib2">
+                Crimes should be stopped, but criminals shouldn't be prosecuted.
+                <br>
+
+                <input type="radio" name="s6" value="Right1">
+                Punishment should be prioritized over rehabilitation.
+                <br>
+
+                <input type="radio" name="s6" value="Right2">
+                Criminals should be brutally tortured to death in public.
+                <br>
             </div>
+
             <div class="question" id="q7">
-                <p>What is your stance on immigration and border policy?</p>
-                <select id="s7">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">Immigrants should be welcomed and provided with benefits in compensation for being at a disadvantage.</option>
-                    <option value="Lib1">Immigrants should be allowed to enter, and subject to the same rules as everyone else.</option>
-                    <option value="Right1">Foreign groups overrunning the country and taking over it and its culture is a serious threat.</option>
-                </select>
+                <h2>7. What is your stance on immigration and borders?</h2>
+
+                <input type="radio" name="s7" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s7" value="Left1">
+                We should prioritize refugees fleeing from poverty or persecution.
+                <br>
+
+                <input type="radio" name="s7" value="Lib1">
+                Borders should be abolished, and anyone should be allowed to come and go as they please.
+                <br>
+
+                <input type="radio" name="s7" value="Right1">
+                We should prioritize immigrants who learn our language or have family born here.
+                <br>
             </div>
+
             <div class="question" id="q8">
-                <p>What best describes your ideal form of government?</p>
-                <select id="s8">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">It shouldn't be too powerful, but should still play an active role in improving the lives of its citizens and leveling the playing field.</option>
-                    <option value="Left2">It should try to ensure equality and a good life for every good person.</option>
-                    <option value="Lib1">It needs to be limited and only provide protection for people's rights.</option>
-                    <option value="Lib2">It shouldn't exist, people should not be forcibly subjected to anything.</option>
-                    <option value="Right1">It should serve as the benefactor of the nation and its good citizens.</option>
-                    <option value="Right2">It should actively work to make its country prosperous, and enforce its central values, morals, and ideas.</option>
-                </select>
+                <h2>8. What is your ideal form of government?</h2>
+
+                <input type="radio" name="s8" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s8" value="Left1">
+                Socialism: the government should step in to protect workers from exploitation.
+                <br>
+
+                <input type="radio" name="s8" value="Left2">
+                Communism: the government should own the means of production and provide everything people need.
+                <br>
+
+                <input type="radio" name="s8" value="Lib1">
+                Minarchism: the government should be as small as possible.
+                <br>
+
+                <input type="radio" name="s8" value="Lib2">
+                Anarchism: the government should not exist.
+                <br>
+
+                <input type="radio" name="s8" value="Right1">
+                Corporatism: national well-being should be prioritized over class conflict.
+                <br>
+
+                <input type="radio" name="s8" value="Right2">
+                Fascism: authority figures should dictate the path of the Nation.
+                <br>
             </div>
+
             <div class="question" id="q9">
-                <p>What is the most important thing which must be protected?</p>
-                <select id="s9">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">Ensuring that everyone can have a good life and and be as equal as possible.</option>
-                    <option value="Lib2">The individual people and their rights.</option>
-                    <option value="Right2">The nation, its values, and prosperity for its people.</option>
-                </select>
+                <h2>9. What is most important?</h2>
+
+                <input type="radio" name="s9" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s9" value="Left2">
+                Equality and making sure everyone has their needs met.
+                <br>
+
+                <input type="radio" name="s9" value="Lib2">
+                Individual rights and freedoms.
+                <br>
+
+                <input type="radio" name="s9" value="Right2">
+                Preserving our culture and values.
+                <br>
             </div>
+
             <div class="question" id="q10">
-                <p>What sorts of non-violent actions, if any, should be criminalized?</p>
-                <select id="s10">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left2">Those which harm or offend society.</option>
-                    <option value="Lib2">None, only actions which infringe upon the liberty of others should be illegal.</option>
-                    <option value="Right2">Those which are immoral or socially unacceptable.</option>
-                </select>
+                <h2>10. What sorts of non-violent actions, if any, should be criminalized?</h2>
+
+                <input type="radio" name="s10" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s10" value="Left2">
+                Aquiring private property or exploiting others.
+                <br>
+
+                <input type="radio" name="s10" value="Lib2">
+                None, only actions which infringe upon the liberty of others should be illegal.
+                <br>
+
+                <input type="radio" name="s10" value="Right2">
+                Immoral or obscene acts, such as drug use or vulgar behavior.
+                <br>
             </div>
+
             <div class="question" id="q11">
-                <p>How should people be protected from themselves when making poor choices?</p>
-                <select id="s11">
-                    <option value="Neutral">No opinion, or don't agree with any of the options (even remotely).</option>
-                    <option value="Left1">Society probably knows better, and should stop people from making the wrong decisions.</option>
-                    <option value="Lib1">People should be encouraged to make better choices, but if they don't the consequences are their own fault. Others have no right to force them to stop.</option>
-                    <option value="Right1">The leaders and authority figures know best, and should stop people from making the wrong decisions.</option>
-                </select>
+                <h2>11. How should people be educated?</h2>
+
+                <input type="radio" name="s11" value="Neutral">
+                No opinion, or don't agree with any of the options (even remotely).
+                <br>
+
+                <input type="radio" name="s11" value="Left1">
+                The government should provide free education to everyone.
+                <br>
+
+                <input type="radio" name="s11" value="Lib1">
+                Taxpayers have no duty to pay for the education of others.
+                <br>
+
+                <input type="radio" name="s11" value="Right1">
+                Only certain classes should be educated.
+                <br>
             </div>
-            <div style="text-align: center"><button class="submit-button" id="submit" onclick="calculateScore();">See results</button></div>
+
+            <div class="centered"><button class="submit-button" id="submit" onclick="calculateScore();">Let's see your results!</button></div>
     	</div>
-		<hr>
-		<small style="text-align:center"><div>Political Triangle by CrystalVulpine, v1.1.0</div></small>
+		<script src="assets/js/footer.js"></script>
     </body>
 </html>

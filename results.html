@@ -2,24 +2,26 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Test Results - The Political Triangle</title>
-        <link rel='shortcut icon' type='image/x-icon' href='favicon.png'/>
+        <title>The Political Triangle Results</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
         <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
         <script src="assets/js/results.js"></script>
     </head>
     <body onload="drawResults();">
-        <div style="text-align: center">
-            <div class="results">
-				<h1>Your results</h1>
-				<canvas id="canvas" class="result-img" height="700" width="750"></canvas>
-				<div class="score-box"><h2>Your score is:</h2>
-					<p><b><span id="left-score"></span> left</b></p>
-					<p><b><span id="right-score"></span> right</b></p>
-					<p><b><span id="lib-score"></span> libertarian</b></p>
-				</div>
+        <script src="assets/js/header.js"></script>
+
+        <div id="content" class="centered">
+            <h1>Your results are in!</h1>
+
+            <canvas id="canvas" height="700" width="750"></canvas>
+            
+            <div class="score-box"><h2>Your score is:</h2>
+                <b class="score"><span id="left-score"></span> Left</b>
+                <b class="score"><span id="right-score"></span> Right</b>
+                <b class="score"><span id="lib-score"></span> Libertarian</b>
             </div>
         </div>
-		<hr>
-		<small style="text-align:center"><div>Political Triangle by CrystalVulpine, v1.1.0</div></small>
+
+        <script src="assets/js/footer.js"></script>
     </body>
 </html>
